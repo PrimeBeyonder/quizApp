@@ -3,7 +3,7 @@ type Props = {
     question: string;
     answers: string[];
     callback: (e: React.MouseEvent<HTMLButtonElement>) => void;
-    userAnswer: AnswerObject | undefined;
+    userAnswer: any;
     questionNr: number;
     totalQuestions: number;
 }
