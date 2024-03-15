@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { fetchQuizQuestions } from './API';
+import { Category, fetchQuizQuestions } from './API';
 // Components
 import QuestionCard from './components/QuestionCard';
 // types
@@ -29,6 +29,7 @@ const App: React.FC = () => {
     setGameOver(false);
     const newQuestions = await fetchQuizQuestions(
       TOTAL_QUESTIONS,
+      Category.VIDEOGAME,
       Difficulty.EASY
     );
     setQuestions(newQuestions);
